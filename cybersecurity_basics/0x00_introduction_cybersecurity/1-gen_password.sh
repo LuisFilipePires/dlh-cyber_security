@@ -1,3 +1,3 @@
 #!/bin/bash
-SENHA=$(< /dev/urandom tr -dc 'A-Za-z0-9!@#$%&*()_+-=' | head -c"$1")
+SENHA=$(< /dev/urandom tr -cd '[:alnum:]' | head -c"$1")
 echo $SENHA
