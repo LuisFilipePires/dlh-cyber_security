@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#script stop by PID and [name]
+kill -9 pgrep -l bash
