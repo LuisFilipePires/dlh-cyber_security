@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#script stop by PID and [name] with pkill, You cannot use kill or killall
+pkill -HUP -f "7-highlander"
