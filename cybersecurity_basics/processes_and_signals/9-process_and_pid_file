@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #scrip to loop a comment, and to comment depending the received signal
 #creats a folder and a file inside with a PID process identification
-DIR="tmp"
+DIR="/tmp"
 FILE="$DIR/myscript.pid"
 mkdir -p "$DIR"
 touch "$FILE"
@@ -19,11 +19,11 @@ cleanup_quit(){
 	exit 0
 }
 
-trap 'cleanup_term' SIGTERM
-trap 'echo "Y U no love me?!"' SIGINT
-trap 'cleanup_quit' SIGQUIT
+trap cleanup_term TERM
+trap 'echo "Y U no love me?!"' INT
+trap cleanup_quit QUIT
 
-while (true)
+while true
 do 
         echo 'To infinity and beyond indefinitely'
         sleep 2
