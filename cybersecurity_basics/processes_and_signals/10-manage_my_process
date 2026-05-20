@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
 #receives a parameter to do an action, initialize another script running in backgroung or daemon
 
-DIR="./tmp"
+# ./tmp   and tmp problem at my kali
+
+DIR="/tmp"
 FILE="$DIR/my_process.pid"
 MSG="manage_my_process"
 
 start_pro(){
+	./manage_my_process &
 	mkdir -p "$DIR"
 	touch "$FILE"
 	echo $$ > "$FILE"
-	./manage_my_process &
 }
 
 stop_pro(){
@@ -30,12 +32,12 @@ case "$1" in
 		echo "$MSG started"
 		;;
 	stop)
-		stop_pro
 		echo "$MSG stopped"
+		stop_pro
 		;;
 	restart)
-		restart_pro
 		echo "$MSG restarted"
+		restart_pro
 		;;
 	*)
 		echo "Usage: manage_my_process {start|stop|restart}"

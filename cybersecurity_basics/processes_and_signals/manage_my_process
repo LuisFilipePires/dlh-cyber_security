@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 #simulate a background process that writes into a file left the terminal free
 
-DIR="./tmp"
+# ./ tmp problem  global directory
+DIR="/tmp"
 FILE="$DIR/my_process"
 mkdir -p  "$DIR"
 touch "$FILE"
