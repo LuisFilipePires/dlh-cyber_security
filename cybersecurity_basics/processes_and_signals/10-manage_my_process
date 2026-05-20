@@ -11,13 +11,12 @@ start_pro(){
 	./manage_my_process &
 	mkdir -p "$DIR"
 	touch "$FILE"
-	echo $$ > "$FILE"
+	echo $! > "$FILE"
 }
 
 stop_pro(){
-	pkill -f "my_process"
-	pkill -f "my_process.pid"
-	rm -f "$FILE"
+	kill $(cat "$FILE")
+	rm  "$FILE"
 }
 
 restart_pro(){
