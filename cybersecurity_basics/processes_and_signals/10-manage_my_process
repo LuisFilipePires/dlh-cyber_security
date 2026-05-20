@@ -17,6 +17,7 @@ start_pro(){
 stop_pro(){
 	rm -f "$FILE"
 	pkill -f "my_process"
+	pkill -f "my_process.pid"
 }
 
 restart_pro(){
