@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+#receives a parameter to do an action, initialize another script running in backgroung or daemon
+
+DIR="./tmp"
+FILE="$DIR/my_process.pid"
+MSG="manage_my_process"
+
+start_pro(){
+	mkdir -p "$DIR"
+	touch "$FILE"
+	echo $$ > "$FILE"
+	./manage_my_process &
+}
+
+stop_pro(){
+	rm -f "$FILE"
+	pkill -f "my_process"
+}
+
+restart_pro(){
+	stop_pro
+	start_pro
+}
+
+#trap 'stop; exit 0' TERM INT QUIT   #not necessary because this processes closes directly
+
+case "$1" in
+	start)
+		start_pro
+		echo "$MSG started"
+		;;
+	stop)
+		stop_pro
+		echo "$MSG stopped"
+		;;
+	restart)
+		restart_pro
+		echo "$MSG restarted"
+		;;
+	*)
+		echo "Usage: manage_my_process {start|stop|restart}"
+esac

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#simulate a background process that writes into a file left the terminal free
+
+DIR="./tmp"
+FILE="$DIR/my_process"
+mkdir -p  "$DIR"
+touch "$FILE"
+
+#trap 'echo "adios"; exit 0' TERM INT QUIT
+trap 'exit 0' TERM INT QUIT
+while true
+do
+	echo "I am alive!" >> "$FILE"
+	sleep 2
+done
