@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #scrip to loop a comment, and to comment depending the received signal
 #creats a folder and a file inside with a PID process identification
-DIR="/tmp"
+DIR="./tmp"
 FILE="$DIR/myscript.pid"
 mkdir -p "$DIR"
 touch "$FILE"
