@@ -1,2 +1,3 @@
 #!/bin/bash
-sudo useradd "$1" -p "$2"
+sudo useradd "$1"
+sudo passwd "$1" "$2"
