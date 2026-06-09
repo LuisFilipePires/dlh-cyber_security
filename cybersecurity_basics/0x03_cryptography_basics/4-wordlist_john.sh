@@ -1,2 +1,2 @@
 #!/bin/bash
-john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt $1
+john --wordlist=/usr/share/wordlists/rockyou.txt --format=raw-md5  $1
