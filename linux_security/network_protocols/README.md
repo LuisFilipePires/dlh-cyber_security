@@ -40,3 +40,18 @@
 - `{}` represents the currently found item
 
 - `+` executes commands in batch (more efficient)
+
+### 3-identify.sh
+#### #!/bin/bash
+#### sudo lynis audit system
+
+
+Lynis is a security auditing tool that scans a Linux system and checks its security posture.
+
+It verifies:
+
+- `Security patches` It checks whether the system and installed software are up to date and if known security updates are missing.
+- `Misconfigurations` It looks for unsafe or incorrect system settings that could weaken security.
+- `Exposed services` It detects running services that are accessible from the network and could increase attack surface.
+- `Incorrect permissions` It checks file and directory permissions to ensure sensitive data is not accessible to unauthorized users.
+- `Known vulnerabilities` It compares system components against known security issues and common weakness patterns.
