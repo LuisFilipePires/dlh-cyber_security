@@ -3,28 +3,28 @@
 ### exercice 2-harden.sh
 
 - `find /`  
-  procura em todo o sistema a partir da raiz `/`
+  searches the entire system starting from the root directory `/`
 
 - `-xdev`  
-  não atravessa outras partições/mounts
+  does not cross other filesystems or mounted partitions
 
 - `-type d`  
-  procura apenas diretórios
+  searches only directories
 
 - `-perm 0002`  
-  encontra ficheiros com permissão de escrita para others
+  finds files with write permission for others
 
 - `-print`  
-  mostra os resultados
+  prints the results
 
 - `-exec`  
-  executa um comando nos resultados
+  executes a command on the found results
 
 - `chmod o-w`  
-  remove permissão de escrita para others (`o`)
+  removes write permission for others (`o`)
 
 - `{}`  
-  representa o item encontrado
+  represents the currently found item
 
 - `+`  
-  executa em lote (mais eficiente)
+  executes commands in batch (more efficient)
