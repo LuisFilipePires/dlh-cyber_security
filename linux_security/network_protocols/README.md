@@ -73,3 +73,31 @@ It verifies:
 -  `|` regular expression -> OR
 -  `^\s*$'` empty lines
 -  `/etc/ssh/sshd_config` path
+
+---
+
+### 5-sshd_config
+#### cat 5-sshd_config
+- Protocol 2
+- PermitRootLogin no
+- PasswordAuthentication no
+- PermitEmptyPasswords no
+- PubkeyAuthentication yes
+- X11Forwarding no
+- Port 22
+
+`Protocol 2` Uses only SSH version 2. SSHv2 is the secure and modern version of the SSH protocol. It fixes vulnerabilities present in SSHv1 and provides stronger encryption and authentication.
+
+`PermitRootLogin no` Disables direct root login. This prevents users from logging in directly as the root user via SSH. Instead, users must log in with a normal account and use sudo, reducing the risk of brute-force attacks on the root account.
+
+`PasswordAuthentication no` Disables password-based login. Only key-based authentication is allowed. This is more secure because SSH keys are much harder to brute-force compared to passwords.
+
+`PermitEmptyPasswords no` Prevents empty passwords. Users are not allowed to log in if their account has no password set. This closes a serious security vulnerability.
+
+`PubkeyAuthentication yes` Enables public key authentication. Allows users to authenticate using SSH keys instead of passwords. This is the recommended and most secure method.
+
+`X11Forwarding no` Disables graphical forwarding over SSH. Prevents remote graphical applications from being forwarded through SSH. This reduces attack surface and improves security.
+
+`Port 22` Defines the SSH listening port. Port 22 is the default SSH port. While it is commonly used, it is also frequently scanned by attackers. In real hardening, this is often changed to a non-standard port.
+
+---
