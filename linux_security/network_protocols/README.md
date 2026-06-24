@@ -101,3 +101,15 @@ It verifies:
 `Port 22` Defines the SSH listening port. Port 22 is the default SSH port. While it is commonly used, it is also frequently scanned by attackers. In real hardening, this is often changed to a non-standard port.
 
 ---
+
+### 6-nfs.sh
+#### !/bin/bash
+#### showmount -e "$1"
+
+`NFS` (Network File System) allows sharing folders over a network.
+
+`showmount` consulting NFS servers tool
+
+`-e` list
+
+---
