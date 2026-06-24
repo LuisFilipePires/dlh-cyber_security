@@ -140,6 +140,8 @@ attackers cannot easily read or modify messages
 
 ---
 
+### 9-tls_version.txt
 
+The TLS versions were tested using OpenSSL. A version is considered supported only if a valid protocol handshake is successfully negotiated. If the server does not properly negotiate the protocol version, it is marked as not supported. Modern servers typically disable TLS 1.0 and TLS 1.1 due to security vulnerabilities, while TLS 1.2 and TLS 1.3 are usually enabled.
 
 ---
