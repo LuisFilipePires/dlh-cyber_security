@@ -2,14 +2,19 @@
 
 - 'sudo'
   runs the command with administrator (root) privileges
+
 - 'iptables'
   Linux firewall tool used to manage network traffic rules
+
 - '-L'
   lists all current firewall rules
+
 - '--line-numbers'
   adds line numbers to each rule (useful to delete or modify specific rules)
+
 - '-v'
   verbose mode → shows detailed information (packets, bytes, interfaces)
+
 - '-n'
   numeric output → shows IP addresses and ports without resolving names (faster and clearer)
 
