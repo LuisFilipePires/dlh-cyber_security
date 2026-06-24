@@ -41,6 +41,8 @@
 
 - `+` executes commands in batch (more efficient)
 
+---
+
 ### 3-identify.sh
 #### #!/bin/bash
 #### sudo lynis audit system
