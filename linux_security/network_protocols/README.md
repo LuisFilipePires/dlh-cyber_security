@@ -113,3 +113,18 @@ It verifies:
 `-e` list
 
 ---
+
+### 7-snmp.sh
+
+#### grep "public" /etc/snmp/snmpd.conf
+
+`SNMP` uses community strings as passwords. If the default public community is enabled, unauthorized users may access system or network information.
+
+`SNMP` (Simple Network Management Protocol) monitors network devices
+- routers
+- switches
+- servers
+- printers
+
+---
+
