@@ -128,3 +128,18 @@ It verifies:
 
 ---
 
+### 8-smtp.sh
+
+When TLS/STARTTLS is enabled:
+
+email content is encrypted in transit
+
+login credentials are protected
+
+attackers cannot easily read or modify messages
+
+---
+
+
+
+---
