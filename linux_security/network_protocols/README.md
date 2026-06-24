@@ -1,13 +1,30 @@
-# Network Protocols: Auditing and Securing
+## Network Protocols: Auditing and Securing
 
+### exercice 2-harden.sh
 
-exercice 2-harden.sh
+- `find /`  
+  procura em todo o sistema a partir da raiz `/`
 
-find /          -> find in all the system, begining at the filesystem root /
--xdev           -> do not pass to other mount / partitions 
--type d         -> find directorys
--perm 0002      -> permission bit write in others | special | owner | group | others |
--print          -> prints find item {}
--exec           -> keeps find's results and tell to execute some thing
--chmod o-w      -> dont allow others to write o = others -w = remove write
-{} +            -> {} item finded -> + execute in batch
+- `-xdev`  
+  não atravessa outras partições/mounts
+
+- `-type d`  
+  procura apenas diretórios
+
+- `-perm 0002`  
+  encontra ficheiros com permissão de escrita para others
+
+- `-print`  
+  mostra os resultados
+
+- `-exec`  
+  executa um comando nos resultados
+
+- `chmod o-w`  
+  remove permissão de escrita para others (`o`)
+
+- `{}`  
+  representa o item encontrado
+
+- `+`  
+  executa em lote (mais eficiente)
