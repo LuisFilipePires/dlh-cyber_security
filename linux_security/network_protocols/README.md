@@ -55,3 +55,19 @@ It verifies:
 - `Exposed services` It detects running services that are accessible from the network and could increase attack surface.
 - `Incorrect permissions` It checks file and directory permissions to ensure sensitive data is not accessible to unauthorized users.
 - `Known vulnerabilities` It compares system components against known security issues and common weakness patterns.
+
+---
+
+###  4-audit.sh
+#### grep -Ev '^\s*#|^\s*$' /etc/ssh/sshd_config
+
+- `grep` tool to filter the text
+- `-E` extended regular expressions
+- `-v` invert match - shows everything except `patern`
+-  `^\s*#` remove all comment lines (lines starting with optional spaces followed by #)
+-  `^` line beginning
+-  `\s` spaces
+-  `#` comments
+-  `|` regular expression -> OR
+-  `^\s*$'` empty lines
+-  `/etc/ssh/sshd_config` path
