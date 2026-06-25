@@ -1,2 +1,2 @@
 #!/bin/bash
-dig "$1" MX +short
+nslookup -type=mx "$1"
