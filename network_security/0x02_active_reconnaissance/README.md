@@ -43,4 +43,10 @@ Flag in the comment :  Dont forget to delete this comment please
 
 ---
 
+## 3. Trypanophobia
+Exercise 4: 2-injectable.txt
+
+The /product endpoint always returns HTTP 200 OK, even for non-existent pages or high ID values (up to 1000), meaning the server does not properly validate the existence of resources and always serves a valid response.
+
+---
 
