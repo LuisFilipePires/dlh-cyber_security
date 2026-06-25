@@ -49,4 +49,11 @@ Exercise 4: 2-injectable.txt
 The /product endpoint always returns HTTP 200 OK, even for non-existent pages or high ID values (up to 1000), meaning the server does not properly validate the existence of resources and always serves a valid response.
 
 ---
+## 4. SQLmap is an army \o/
+Exercise 5: 3-database.txt, 4-tables.txt
+
+ sqlmap -u "http://active.hbtn/product/1" --dbs --batch
+
+---
+
 
