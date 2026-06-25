@@ -5,7 +5,7 @@
 Exercise 0: 0-ports.txt
 ---
 
-I use `nmap` to scan ports at ip:10.42.64.157
+I use `nmap` to scan 1000 ports at ip:10.42.64.157
 
 ### nmap --top-ports 1000 10.42.64.157
 
