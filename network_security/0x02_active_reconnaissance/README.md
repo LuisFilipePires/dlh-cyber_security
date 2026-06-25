@@ -1,9 +1,8 @@
 # Active Reconnaissance
 
 ---
-## Are there any opened ports?
+## 1. Are there any opened ports?
 Exercise 0: 0-ports.txt
----
 
 I use `nmap` to scan 1000 ports at ip:10.42.64.157
 
@@ -17,7 +16,7 @@ I use `nmap` to scan 1000 ports at ip:10.42.64.157
 - 80/tcp open  http
 
 ---
-## Inspect the runner
+## 1. Inspect the runner
 Exercise 1: 1-webserver.txt
 
 ### command: sudo bash -c 'echo "10.42.64.157  active.hbtn" >> /etc/hosts'
@@ -35,4 +34,13 @@ I use `curl -I http://active.hbtn` to obtain results
 - Vary: Cookie
 
 ---
+
+## 2. Nothing defeat Manual inspection 
+Exercise 3: 100-flag.txt
+
+Flag in the comment :  Dont forget to delete this comment please
+         Holberton Sec Lab - 26160aebb9c9dc8ed585078091886d66 
+
+---
+
 
