@@ -1,2 +1,2 @@
 #!/bin/bash
-dig "$1" MX
+dig "$1" MX +short
