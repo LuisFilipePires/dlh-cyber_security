@@ -36,7 +36,7 @@
 
 ---
 
-## 3. IP Addresses Observed
+## IP Addresses Observed
 
 ### AWS Infrastructure
 
@@ -56,7 +56,7 @@
 ---
 
 
-## 6. Technologies Identified
+## Technologies Identified
 
 ### Web Servers
 
@@ -72,7 +72,7 @@
 
 ---
 
-## 7. Security Headers Observed
+## Security Headers Observed
 
 - X-Frame-Options
 - X-XSS-Protection
@@ -81,7 +81,7 @@
 
 ---
 
-## 8. Observations
+## Observations
 
 - The infrastructure is distributed across multiple cloud providers (AWS and Scaleway).
 - Multiple IP addresses are associated with the same subdomains, indicating load balancing or historical DNS resolution.
@@ -90,6 +90,6 @@
 
 ---
 
-## 9. Conclusion
+## Conclusion
 
 The domain `holbertonschool.com` is hosted in a distributed, multi-cloud architecture leveraging AWS and Scaleway. The presence of multiple IPs per subdomain suggests load balancing and scalable infrastructure design. Basic security headers and TLS encryption are properly implemented, indicating standard security practices.
