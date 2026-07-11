@@ -1,5 +1,48 @@
 # Python for Cybersecurity
 
+# 0 - dns resolver
+
+The purpose of this program is to obtain the IP address by providing the domain name.
+
+```import socket```
+Imports the socket module, which provides access to the network functions of the operating system.
+
+Among them is ```gethostbyname()```, used to query DNS servers.
+
+try
+```
+try:
+    return socket.gethostbyname(domain_name)
+
+socket.gethostbyname(domain_name)
+```
+
+This function:
+
+Queries DNS.
+Looks up the IPv4 address associated with the domain.
+Returns a string containing the IP.
+
+### On ERROR
+
+```
+except socket.gaierror:
+    return None
+```
+
+### Exception nd variable e
+
+The variable `e` contains the error description.
+
+For example:
+
+```return str(e)```
+
+It might return something like:
+
+```"[Errno 101] Network is unreachable"```
+
+
 ---
 ---
 
