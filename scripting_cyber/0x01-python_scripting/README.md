@@ -105,7 +105,9 @@ if parsed.scheme not in ("http", "https"):
     continue
 ```
 
-### Same domain, if domain was "Example.com" and find a link like "https://google.com" it is ignored, then curl never goes out from site
+### Same domain
+
+if domain was ```Example.com``` and find a link like ```https://google.com``` it is ignored, then curl never goes out from site
 
 ```
 if parsed.netloc != domain:
