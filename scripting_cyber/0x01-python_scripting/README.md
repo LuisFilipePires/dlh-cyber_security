@@ -33,11 +33,6 @@ Hardcoded for depth
 def crawl_website(start_url, max_depth=2):
 ```
 
-
-### Read HTML
-
-```soup = BeautifulSoup(response.text, "html.parser") ``` Now beautifulSoup can look for link's
-
 ### Finding domain
 
 ```domain = urlparse(start_url).netloc```
@@ -65,12 +60,86 @@ Call HTTP, if response 404, 500 or timeout -> ```except RequestException:  -> re
 
 ```response = requests.get(url, timeout=5)```
 
+### Read HTML
+
+```soup = BeautifulSoup(response.text, "html.parser") ``` Now beautifulSoup can look for link's
+
+Looking for links
+
+```
+for link in soup.find_all("a", href=True):
+```
+
+Iterates through all tags
+
+```
+<a href="...">
+
+Example>
+
+<a href="/about">
+<a href="/contact">
+<a href="https://google.com">
+```
+
+## Transform in absolut URL
+
+```
+absolute_url = urljoin(url, link["href"])
+```
+
+Se estiveres em ```https://example.com/blog```
+
+and  HTML have ```<a href="/about">``` then absolute_url stays ```https://example.com/about```
+
+### Analisar a URL
+
+```parsed = urlparse(absolute_url)```
+
+Parse URL in parts.
+
+Only HTTP, Ignore links like " mailto:, tel:, ftp:
+
+```phyton
+if parsed.scheme not in ("http", "https"):
+    continue
+```
+
+### Same domain, if domain was "Example.com" and find a link like "https://google.com" it is ignored, then curl never goes out from site
+
+```
+if parsed.netloc != domain:
+    continue
+```
+
+### Removing URL fragments
+
+A URL can look like this:
+
+```https://example.com/page#section1```
+
+The #section1 part is called a URL fragment (or anchor). It points to a specific section within the same page and is not sent to the server when the page is requested.
+
+```clean_url = parsed._replace(fragment="").geturl()```
+
+This removes the fragment, turning:
+
+```https://example.com/page#section1```
+
+into:
+
+```https://example.com/page```
+
+This helps avoid visiting or processing the same page multiple times when the only difference is the fragment identifier.
 
 
+### Starting the crawler
 
+At the end of the function:
 
+```crawl(start_url, 0)```
 
-
+This starts the crawler from the initial URL with a depth of 0. The crawler then begins visiting pages and recursively follows links until it reaches the maximum depth.
 
 ---
 ---
