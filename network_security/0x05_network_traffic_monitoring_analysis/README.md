@@ -34,3 +34,13 @@ Displayed : 2
 tcp.flags.syn == 1 && tcp.flags.ack == 0 -> expand transmission control protocol
 
 DST port: 8080
+
+
+## Flag 04
+
+filters: ftp or tcp.port == 21
+
+double click, find PASS
+
+## Flag 05
+
