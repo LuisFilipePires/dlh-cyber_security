@@ -44,3 +44,9 @@ double click, find PASS
 
 ## Flag 05
 
+-> follow ->TCP stream
+
+important: missing bytes
+
+calculate the message
+
