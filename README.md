@@ -9,9 +9,23 @@ Each project includes a detailed description of the studies, concepts learned, a
 ---
 ---
 
+### check first
+
+```ip a | grep tun ```
+
+```ip addr | grep tun```
+
+close
+```
+sudo pkill openvpn
+sudo ip link delete tun0
+```
+
 ## Target Environment
 - To connect to the target environment, I first establish the VPN connection using the .ovpn file with:
+
 - `sudo openvpn /path/to/file.ovpn`
+
 - After that, I launch the target machine in the sandbox/platform and start testing.
 - If the target hostname does not resolve, I add it manually to /etc/hosts by mapping the target IP to the hostname. 
 
@@ -83,6 +97,7 @@ or
 http://10.42.43.219/
 
 or by clicking directly in `HTTP pot 80` button
+
 
 
 
