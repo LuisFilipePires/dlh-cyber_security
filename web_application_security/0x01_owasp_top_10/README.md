@@ -63,19 +63,10 @@ PBKDF2
 
 This example demonstrates the OWASP Top 10 concept of cryptographic failures, where weak protection mechanisms can expose sensitive information.
 
-
----
-
-
-
-
 10.42.190.180
 http://10.42.190.180/a2/crypto_encoding_failure/
 
-
----
-
-## 2-flag.txt
+## find the flag
 
 The hint says:
 
@@ -143,8 +134,9 @@ After authentication, i got the flag:
 
 
 ---
+---
 
-## 3
+# 2-flag.txt
 
 by pray attention in request response 
 
