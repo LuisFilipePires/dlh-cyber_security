@@ -140,6 +140,10 @@ After authentication, i got the flag:
 
 by pray attention in request response 
 
+connect
+
+`http://10.42.43.219/a3/xss_stored/profile`
+
 ```
 last_actions	
 "John - Visited you - Wed Aug 5 10:28:26 2026 - UserID: 918203", 
