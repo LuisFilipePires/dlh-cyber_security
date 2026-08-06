@@ -18,7 +18,7 @@ Each project includes a detailed description of the studies, concepts learned, a
 ### VPN Connection Issues - Check VPN status:
 
 
-```ip a | grep tun  '''
+```ip a | grep tun ```
 
 ```ip addr | grep tun```
 
