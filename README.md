@@ -13,13 +13,21 @@ Each project includes a detailed description of the studies, concepts learned, a
 - If the target hostname does not resolve, I add it manually to /etc/hosts by mapping the target IP to the hostname. `echo "10.10.11.25 target.local" | sudo tee -a /etc/hosts` (tee to resolve a problem of authorization with linux) or `sudo nano /etc/hosts`
 
 
-### VPN Connection Issues - Check VPN status: ```bash ip addr | grep tun```
+### VPN Connection Issues - Check VPN status: `
 
-If tun0 is stuck or other:
+```ip a | grep tun  '''
+
+``ip addr | grep tun```
+
+If tunX is stuck or other:
 
 ```
 sudo pkill openvpn
 sudo ip link delete tun0
+
+and confirm
+
+ip addr | grep tun
 ```
 
 Restart VPN:
