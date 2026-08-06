@@ -6,6 +6,9 @@ All projects are committed by modules as I progress through the program.
 
 Each project includes a detailed description of the studies, concepts learned, and the project itself.
 
+---
+---
+
 ## Target Environment
 - To connect to the target environment, I first establish the VPN connection using the .ovpn file with:
 - `sudo openvpn /path/to/file.ovpn`
